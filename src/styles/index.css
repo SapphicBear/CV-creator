@@ -43,3 +43,14 @@ ul, li {
 li {
     list-style: none;
 }
+h1 {
+    place-self: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+.general-information {
+    display: flex; 
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
