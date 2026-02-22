@@ -15,8 +15,9 @@ function App() {
                 <hr />
             </header>
             <main>
-                <h1>General Information</h1>
-                <section className="general-information">
+                <h1>Enter your information</h1>
+                <section className="general-information" aria-labeledby="section1">
+                    <h2 id="section1">General information</h2>
                     <General 
                         className="firstName"
                         labelName="First Name"
@@ -42,7 +43,8 @@ function App() {
                 </section>
                 <br />
                 <hr />
-                <section className='education-information'>
+                <section className='education-information' aria-labelledby="section2">
+                    <h2 id="section2">Education information</h2>
                     
                 </section>
             </main>
