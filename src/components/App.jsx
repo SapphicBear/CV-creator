@@ -12,10 +12,37 @@ function App() {
         <>
             <header>
                 <h1>CV Creator in React</h1>
+                <br />
+                <hr />
             </header>
             <main>
-                <General 
-                />
+                <h1>General Information</h1>
+                <section className="general-information">
+                    <General 
+                        className="firstName"
+                        labelName="First Name"
+                        id={crypto.randomUUID()}
+                    />
+                    <General 
+                        className="lastName"
+                        labelName="Last Name"
+                        id={crypto.randomUUID()}
+                    />
+                    <General 
+                        className="telephone"
+                        labelName="Phone Number"
+                        type="tel"
+                        id={crypto.randomUUID()}
+                    />
+                    <General 
+                        className="email"
+                        labelName="Email Address"
+                        type="email"
+                        id={crypto.randomUUID()}
+                    />
+                </section>
+                <br />
+                <hr />
             </main>
         </>
     );

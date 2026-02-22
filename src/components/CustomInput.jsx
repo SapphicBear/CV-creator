@@ -6,10 +6,10 @@ export default function CustomInput( { onChange, value, className, type = "text"
             value={labelName}
         >
             <input 
+                id={className}
                 placeholder={labelName}
                 value={value}
                 onChange={onChange}
-                className={className}
                 type={type}
             />
         </label>

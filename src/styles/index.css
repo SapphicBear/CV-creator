@@ -48,9 +48,17 @@ h1 {
     padding-top: 1rem;
     padding-bottom: 1rem; 
 }
+main > h1 {
+    font-size: 28px;
+}
+
 .general-information {
     display: flex; 
     gap: 2rem;
     justify-content: center;
     align-items: center;
+}
+input[type="text"], input[type="tel"], input[type="email"] {
+    height: 2.2rem;
+    padding: 0.2rem;
 }
