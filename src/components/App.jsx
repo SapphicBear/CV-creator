@@ -7,7 +7,6 @@ import General from "./General";
 
 function App() {
 
-
     return (
         <>
             <header>
@@ -43,6 +42,9 @@ function App() {
                 </section>
                 <br />
                 <hr />
+                <section className='education-information'>
+                    
+                </section>
             </main>
         </>
     );
