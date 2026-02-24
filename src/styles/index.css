@@ -62,3 +62,11 @@ input[type="text"], input[type="tel"], input[type="email"] {
     height: 2.2rem;
     padding: 0.2rem;
 }
+section {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    display: flex; 
+    gap: 1rem;
+}

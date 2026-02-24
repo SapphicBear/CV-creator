@@ -1,3 +1,4 @@
+
 export default function CustomInput( { onChange, value, className, type = "text", id = "", labelName }) {
     return (
         <label
@@ -9,8 +10,8 @@ export default function CustomInput( { onChange, value, className, type = "text"
                 id={className}
                 placeholder={labelName}
                 value={value}
-                onChange={onChange}
                 type={type}
+                onChange={onChange}
             />
         </label>
     )

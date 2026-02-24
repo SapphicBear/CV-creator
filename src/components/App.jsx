@@ -6,6 +6,26 @@ import General from "./General";
 // All fields should be editible and able to be clicked on to edit
 
 function App() {
+    const initialValues = [
+        {
+            general: {
+                firstName: null,
+                lastName: null,
+                telephone: null,
+                email: null
+        }},
+        {
+            education: {
+                schools: [],
+                courses: [],
+            }
+        },
+        {
+            practical: {
+                jobs: [],
+            }
+        }
+    ];
 
     return (
         <>
@@ -16,30 +36,36 @@ function App() {
             </header>
             <main>
                 <h1>Enter your information</h1>
-                <section className="general-information" aria-labeledby="section1">
+                <section className="general-information" aria-labelledby="section1">
                     <h2 id="section1">General information</h2>
+                    <div className="wrapper">
                     <General 
                         className="firstName"
                         labelName="First Name"
                         id={crypto.randomUUID()}
+                        initialValues={initialValues.general}
                     />
                     <General 
                         className="lastName"
                         labelName="Last Name"
                         id={crypto.randomUUID()}
+                        initialValues={initialValues.general}
                     />
                     <General 
                         className="telephone"
                         labelName="Phone Number"
                         type="tel"
                         id={crypto.randomUUID()}
+                        initialValues={initialValues.general}
                     />
                     <General 
                         className="email"
                         labelName="Email Address"
                         type="email"
                         id={crypto.randomUUID()}
+                        initialValues={initialValues.general}
                     />
+                    </div>
                 </section>
                 <br />
                 <hr />

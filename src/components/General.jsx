@@ -2,13 +2,8 @@
 import CustomInput from "./CustomInput"
 import { useState } from "react";
 
-function General({ className, type, labelName, id }) {
-    const [values, setValues] = useState({
-        firstName: null,
-        lastName: null,
-        telephone: null,
-        email: null
-    });
+function General({ className, type, labelName, id, initialValues }) {
+    const [values, setValues] = useState({initialValues});
     function handleChange(selectedValue, e) {;
         setValues({...values, selectedValue: e.target.value })
     }
@@ -24,7 +19,6 @@ function General({ className, type, labelName, id }) {
                     handleChange({className}, e)
                 }}
             />
-        
         </>
     );
 }
