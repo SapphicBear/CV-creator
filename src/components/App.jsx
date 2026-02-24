@@ -7,6 +7,10 @@ import Button from "./Button";
 // All fields should be editible and able to be clicked on to edit
 
 function App() {
+    const [asideActive, setAsideActive] = useState(true);
+    function toggleAside() {
+        setAsideActive(asideActive ? false : true)
+    }
     const [genIsActive, setGenIsActive] = useState(true);
     const [generalValues, setGeneralValues] = useState({
         firstName: "",
@@ -77,7 +81,7 @@ function App() {
                 <hr />
             </header>
             <main>
-                <h1>Personal Info</h1>
+                <h1>Your CV</h1>
                 <section aria-labelledby='render-area1'>
                     <h2 id="render-area1">Personal Information</h2>
                     <hr></hr>
@@ -89,13 +93,18 @@ function App() {
                 </section>
                 <br />
                 <hr />
-                <section className='education-information' aria-labelledby="section2">
-                    <h2 id="section2">Education information</h2>
-                </section>
             </main>
-            <aside className="input-area">
-                <h1>Enter your information</h1>
-                <section className="general-information" aria-labelledby="section1">
+            <aside className="input-area" style={!asideActive ? { maxHeight: "120px" } : { minHeight: "50vh"}} aria-labelledby='aside-header'>
+                <div className="aside-wrapper">
+                    <h1 id="aside-header">Enter your information</h1>
+                    <Button 
+                        text={asideActive ? "↓" : "↑"}
+                        type="button"
+                        onClick={toggleAside}
+                    />
+                </div>
+                <section className="general-information" aria-labelledby="section1"
+                style={asideActive ? { visibility: "visible"} : {visibility: "hidden"}}>
                     <h2 id="section1">General information</h2>
                     <div className="wrapper">
                         <General

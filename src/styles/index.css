@@ -51,7 +51,10 @@ h1 {
 main > h1 {
     font-size: 28px;
 }
-
+#root {
+    max-width: 100vw;
+    min-height: 200vw;
+}
 .general-information {
     display: flex; 
     gap: 2rem;
@@ -62,11 +65,49 @@ input[type="text"], input[type="tel"], input[type="email"] {
     height: 2.2rem;
     padding: 0.2rem;
 }
-section {
+main > * {
+    margin: 0.5rem 10rem;
     display: flex;
     flex-direction: column;
 }
 .wrapper {
     display: flex; 
     gap: 1rem;
+}
+aside {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    background: rgb(226, 227, 230);
+    place-self: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 4px solid rgb(100, 100, 100);
+    box-shadow: rgba(0, 0, 0, 0.151) 0px -8px 10px;
+    max-width: 90vw;
+    padding: 2rem;
+}
+.aside-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.aside-wrapper > button {
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+}
+
+main {
+    place-self: center;
+    padding: 0 5rem 0;
+    min-width: 80vw;
+}
+
+.render-general-information {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 2rem;
 }
