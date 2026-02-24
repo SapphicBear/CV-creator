@@ -1,24 +1,22 @@
 // General information, name email and phone number section
 import CustomInput from "./CustomInput"
-import { useState } from "react";
 
-function General({ className, type, labelName, id, initialValues }) {
-    const [values, setValues] = useState({initialValues});
-    function handleChange(selectedValue, e) {;
-        setValues({...values, selectedValue: e.target.value })
-    }
+function General({ generalArea, disabled }) {
     return (
         <>
-            <CustomInput 
-                type={type}
-                id={id}
-                className={className}
-                labelName={labelName}
-                value={values[{className}]}
-                onChange={(e) => {
-                    handleChange({className}, e)
-                }}
+        {generalArea.map((item, i) => {
+            return (
+                <CustomInput 
+                key={[item.className, i].join("_")} 
+                className={item.className}
+                labelName={item.labelName}
+                id={crypto.randomUUID()}
+                onChange={item.onChange}
+                value={item.value}
+                disabled={disabled}
             />
+            );
+        })}           
         </>
     );
 }

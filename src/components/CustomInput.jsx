@@ -1,7 +1,7 @@
-
-export default function CustomInput( { onChange, value, className, type = "text", id = "", labelName }) {
+export default function CustomInput( { className, type = "text", id = "", labelName, onChange, value, disabled }) {
+    
     return (
-        <label
+        <><label
             className={className}
             id={id}
             value={labelName}
@@ -12,7 +12,9 @@ export default function CustomInput( { onChange, value, className, type = "text"
                 value={value}
                 type={type}
                 onChange={onChange}
+                disabled={disabled}
             />
         </label>
+        </>
     )
 }
