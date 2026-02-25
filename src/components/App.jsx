@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './../styles/App.css';
 import General from "./General";
 import Button from "./Button";
 import Education from './Education';
