@@ -1,23 +1,19 @@
 // Information on education, school names, title of study...
 import CustomInput from "./CustomInput";
-// import { useState } from "react";
+import Button from "./Button";
 
-export default function Education({ className, labelName = "School name/Program name, etc", type, id }) {
+
+export default function Education({ disabled, value, id, onChange }) {
     
-    function handleChange() {
-        
-    }
     return (
-        <>
             <CustomInput 
-                id={id}
-                className={className}
-                labelName={labelName}
-                type={type}
-                onChange={() => {
-                    handleChange();
-                }}
-            />
-        </>
-    );
+                    key={id}
+                    id={id}
+                    placeholder="Enter a school, time of attendance and degree (if applicable)"
+                    value={value}
+                    disabled={disabled}
+                    onChange={onChange}
+                    />
+        );
+    
 }

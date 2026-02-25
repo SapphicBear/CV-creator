@@ -1,4 +1,4 @@
-export default function Button({ text = "Default", onClick, styles, type = "button", id }) {
+export default function Button({ text = "Default", onClick, styles, type = "button", id, disabled }) {
     
     return (
         <button
@@ -6,6 +6,7 @@ export default function Button({ text = "Default", onClick, styles, type = "butt
             type={type}
             onClick={onClick}
             style={{styles}}
+            disabled={disabled}
         >
             {text}
         </button>
